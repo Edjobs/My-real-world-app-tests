@@ -28,10 +28,10 @@ describe ('Testes do Exercício 1 Criar novo Usuario com sucesso e falha', () =>
 
         if (selectorsList.newUserTuto.includes("Get Started with Real World App")) {
            newUserPage.newUserTutorial() }
-        //cy.get(selectorsList.newUserTuto).then(($body) => {
-            //if ($body.text().includes("Get Started with Real World App")) {
-           // newUserPage.newUserTutorial()        
-       // }})
+        cy.get(selectorsList.newUserTuto).then(($body) => {
+            if ($body.text().includes("Get Started with Real World App")) {
+           newUserPage.newUserTutorial()        
+        }})
         newUserPage.newUserCheck()      
 
         
